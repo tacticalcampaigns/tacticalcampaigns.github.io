@@ -17,12 +17,13 @@
 body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
 a{color:var(--navy)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{background:var(--deep);color:#fff}
-.topbar{display:flex;align-items:center;gap:14px;padding:18px 0 14px}
-.mark{flex:0 0 auto}
-.brand small{display:block;font-size:11px;letter-spacing:.32em;color:rgba(255,255,255,.65);font-weight:600}
-.brand h1{font-family:Cinzel,Georgia,serif;font-size:30px;line-height:1.1;margin:2px 0 0;font-weight:600}
-nav{display:flex;gap:4px;padding:0 0 14px;align-items:center}
+header{background:#fff}
+.topbar{display:flex;align-items:center;gap:18px;padding:16px 0}
+.logo{height:72px;width:auto;display:block}
+.vdiv{width:1px;height:46px;background:var(--line);flex:0 0 auto}
+.product{font-family:Cinzel,Georgia,serif;font-size:26px;line-height:1.1;margin:0;font-weight:600;color:var(--deep)}
+.navstrip{background:var(--deep)}
+nav{display:flex;gap:4px;padding:8px 0;align-items:center}
 nav a,.dropbtn{color:#fff;text-decoration:none;font-size:14px;font-weight:500;padding:8px 12px;border-radius:6px;background:none;border:0;cursor:pointer;font-family:inherit}
 nav a:hover,.dropbtn:hover{background:rgba(255,255,255,.12)}
 .dropdown{position:relative}
@@ -54,30 +55,33 @@ section.block p{color:var(--muted);max-width:720px}
 footer{background:var(--deep);color:rgba(255,255,255,.75);padding:28px 0;font-size:13.5px}
 footer a{color:#fff}
 @media(max-width:820px){.grid,.principles{grid-template-columns:1fr 1fr}.hero h2{font-size:32px}}
-@media(max-width:560px){.grid,.principles{grid-template-columns:1fr}.brand h1{font-size:24px}.menu{min-width:280px}}
+@media(max-width:560px){.grid,.principles{grid-template-columns:1fr}.logo{height:52px}.product{font-size:20px}.menu{min-width:280px}}
 </style>
 </head>
 <body>
 <header>
-  <div class="wrap">
-    <div class="topbar">
-      <svg class="mark" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="#9A1220" stroke-width="3"/><line x1="20" y1="1" x2="20" y2="9" stroke="#9A1220" stroke-width="3"/><line x1="20" y1="31" x2="20" y2="39" stroke="#9A1220" stroke-width="3"/><line x1="1" y1="20" x2="9" y2="20" stroke="#9A1220" stroke-width="3"/><line x1="31" y1="20" x2="39" y2="20" stroke="#9A1220" stroke-width="3"/><circle cx="20" cy="20" r="3" fill="#9A1220"/></svg>
-      <div class="brand"><small>TACTICAL CAMPAIGNS</small><h1>Tactical Data</h1></div>
-    </div>
-    <nav>
-      <div class="dropdown" id="dashDrop">
-        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Dashboards ▾</button>
-        <div class="menu">
-          <a href="#early-vote"><span>Utah Early Vote Dashboard</span><span class="st">Coming soon</span></a>
-          <a href="#mail-map"><span>Utah Precinct Mail Map</span><span class="st">Coming soon</span></a>
-          <a href="#race-monitor"><span>Utah Race Monitor</span><span class="st">Coming soon</span></a>
-          <a href="#ballot-tracker"><span>Utah Ballot Count Tracker</span><span class="st live">Live</span></a>
-          <a href="#influence-mapper"><span>Utah Influence Mapper</span><span class="st">Planned</span></a>
+  <div class="wrap topbar">
+    <a href="/"><img class="logo" src="logo.png" alt="Tactical Campaigns" width="600" height="288"></a>
+    <span class="vdiv" aria-hidden="true"></span>
+    <h1 class="product">Tactical Data</h1>
+  </div>
+  <div class="navstrip">
+    <div class="wrap">
+      <nav>
+        <div class="dropdown" id="dashDrop">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Dashboards ▾</button>
+          <div class="menu">
+            <a href="#early-vote"><span>Utah Early Vote Dashboard</span><span class="st">Coming soon</span></a>
+            <a href="#mail-map"><span>Utah Precinct Mail Map</span><span class="st">Coming soon</span></a>
+            <a href="#race-monitor"><span>Utah Race Monitor</span><span class="st">Coming soon</span></a>
+            <a href="#ballot-tracker"><span>Utah Ballot Count Tracker</span><span class="st live">Live</span></a>
+            <a href="#influence-mapper"><span>Utah Influence Mapper</span><span class="st">Planned</span></a>
+          </div>
         </div>
-      </div>
-      <a href="#methodology">Methodology</a>
-      <a href="#about">About</a>
-    </nav>
+        <a href="#methodology">Methodology</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </div>
 </header>
 <main class="wrap">
